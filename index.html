@@ -1,1 +1,173 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Channels Widget Demo</title>
+  <!-- add the font awesome link here -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link rel="icon"href="https://imimobile.com/favicon.ico?v=693zqjj9mr" type="image/x-icon!">
+</head>
+<body>
+  <!-- HEADER -->
+    <header>
+      <a href="index.html"><img id="logo" src="https://imimobile-production.ams3.cdn.digitaloceanspaces.com//site/logo-dark.svg" alt="imimobile's logo"></a>
+    </header>
+
+		<!-- MAIN BODY CONTAINER -->
+    <div id="container">
+    <nav class="navMenu" id="myNavMenu">
+      <div class="navColL">
+        <p><b>imi</b>solutions - <b><span id="demoTitle">Channels widget demo</span></b></p>
+      </div>
+    </nav>
+
+    <div class="clear"></div>
+    <br>
+
+    <div id="defaultContainer">
+      <div id="defaultDiv" style="display:show;">
+        <img id="heroIMG" src="https://awsprodemailassets.s3.amazonaws.com/0ae1dbc4-e5aa-46c3-8aed-55995aabf5b7/multichannel_3414443029956650.png" alt="Multichannel image">
+        <div class="clear"></div>
+        <br>
+        <h2>Widget Channels Demo</h2>
+        <div class="text">
+          <p>Interact with with the widget in the bottom right hand corner of your screen or click on the 'Contact' button below and go through the options to choose a reason for contact and your preferred channel.</p>
+        </div>
+       <div id="toggleWidget" style="text-align:center;">
+            <div id="contact">
+              <p class="questionButton">Contact</p>
+            </div>
+            <div id="contactAlt" style="display:none;">
+              <p class="questionButton">Contact</p>
+            </div>
+        </div>
+      </div>
+    </div>  
+    <div class="clear"></div>
+    <br>
+
+
+  </div>	
+  <footer>
+    <span>
+      <p><b>imi</b>solutions &nbsp
+      <a href="https://demolaunchpad.imisolutions.repl.co/" target="_blank"><i class="fas fa-rocket"></i></a>
+      &nbsp
+      <a href="https://imimobile.com/" target="_blank"><i class="fas fa-globe"></i></a>
+      &nbsp
+      <a href="https://www.linkedin.com/company/imimobile/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </p>
+    </span>
+  </footer>
+
+  <!--
+    WIDGET START SECTION
+  -->
+  <div id="widget">
+    <img class="widgetHero" id="widgetHero" src="https://awsprodemailassets.s3.amazonaws.com/0ae1dbc4-e5aa-46c3-8aed-55995aabf5b7/widgetChat_11879763489762669.png" alt="widget image">
+    <img class="widgetHero" id="widgetHeroClose" src="https://awsprodemailassets.s3.amazonaws.com/0ae1dbc4-e5aa-46c3-8aed-55995aabf5b7/widgetMinimize_11879771465125468.png" alt="widget close image" style="display:none;">
+    <div class="widgetMenu" id="widgetMenu" style="display:none;">
+      <div style="background-color:#1E1E35;">
+        <img id="widgetLogo" src="https://awsprodemailassets.s3.amazonaws.com/0ae1dbc4-e5aa-46c3-8aed-55995aabf5b7/imi_fav_app_icon-GTpng_6485156713756112.png" alt="imimobile's logo">
+      </div>
+      <!-- Div container for questions, with sub-divs needed -->
+      <p style="max-width: 95%;margin:auto;padding-top:5px;">Please choose a contact reason below:</p>
+      <div class="questionsRow">
+        <div class="questionsx2">
+          <p class="questionButton" id="chatOption">Chat</p>
+        </div>
+        <div class="questionsx2">
+          <a href="https://imimobile.com/" id="imiOption" class="questionButton"  target="_blank">imi info</a>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+<!-- 
+  OTHER OPTIONS IF NEEDED
+
+      <div class="questionsRow" style="display:none;">
+        <div class="questionsx3">
+          <p>Financial Adviser</span>:
+          <br>
+          Date:
+          <br>
+          Time:</p>
+        </div>
+        <div class="questionsx3" >
+          <p><i class="fas fa-user" style="color:#4059FB;"></i> &nbsp; Joe <span id="representative">Bloggs</span>
+          <br><i class="fas fa-calendar-day" style="color:#4059FB;"></i> &nbsp; 
+          <span id="date"></span>
+          <br>
+          <i class="fas fa-clock" style="color:#4059FB;"></i> &nbsp; 3pm</p>
+        </div>
+        <div class="questionsx3">
+          <p><i class="fas fa-user" style="color:#4059FB;"></i> &nbsp; Joe <span id="representative">Bloggs</span>
+          <br><i class="fas fa-calendar-day" style="color:#4059FB;"></i> &nbsp; 
+          <span id="date"></span>
+          <br>
+          <i class="fas fa-clock" style="color:#4059FB;"></i> &nbsp; 3pm</p>
+        </div>
+      </div>
+
+-->
+
+      <div class="clear"></div>
+      
+      <!-- Div container for channels -->
+      <div id="contactOptions" style="display:none;">
+        <hr>
+        <p style="font-size:12px;text-align:center;font-weight:600;">Web Chat</p>
+        <hr>
+        <!-- Web Chat -->
+        <div class="row">
+          <div class="wideColumn">
+            <p class="stdButton" id="webChat" onclick="showChat();"><i class="far fa-comment-alt"></i></p>
+          </div>
+        </div>
+        <!-- SMS -->
+        <hr>
+        <p style="font-size:12px;text-align:center;font-weight:600;">SMS / Text</p>
+        <hr>
+        <div class="row">
+          <div class="wideColumn mobShow">
+            <a class="stdButton" href="sms://+447418397311?&body=Chatdemo" target="_blank"><i class="far fa-comment-alt"></i></a>
+          </div>
+          <div class="wideColumn mobShow">
+            <img class="qrCode" src="https://quickchart.io/qr?text=sms://+447418397311?&body=Chatdemo&size=200" alt="WhatsApp QR code">
+          </div>
+          <div class="wideColumn mobhide">
+            <img class="qrCode" src="https://quickchart.io/qr?text=sms://+447418397311?&body=Chatdemo&size=200" alt="WhatsApp QR code">
+          </div>
+        </div>
+        <!-- WhatsApp -->
+        <hr>
+        <p style="font-size:12px;text-align:center;font-weight:600;">WhatsApp</p>
+        <hr>
+        <div class="row">
+          <div class="wideColumn">
+            <a class="stdButton" href="https://wa.me/447942207637/?text=Message%20the%20team" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          <div class="wideColumn">
+            <img class="qrCode" src="https://quickchart.io/qr?text=https://wa.me/447942207637/?text=Message%2520the%2520team&size=200" alt="WhatsApp QR code">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+      WIDGET END SECTION
+    -->
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+
+  <div id="divicw" data-bind="56d4f71a-d8c0-11ea-842a-06c5deadccda" data-org="" style="display:none;"></div><script>var i={t:function(t){var e="https://attachuk.imi.chat/widget/js/imichatinit.js";try{var o=new XMLHttpRequest;o.onreadystatechange=function(){if(this.readyState==4){var t=document.getElementById("divicw");if(this.status==0){i.o(t);return}var e=document.createElement("script");e.innerHTML=this.responseText;t.parentNode.insertBefore(e,t.nextSibling)}};o.open("GET",e,true);o.send()}catch(s){console.error(s)}},o:function(t){t.insertAdjacentHTML("afterend",'<iframe id="tls_al_frm" frameborder="0" style="overflow: hidden;height: 208px;width: 394px;position: fixed;display: block;right: 48px;bottom: 12px;z-index: 99999; display:none;"></iframe>');var e=document.getElementById("tls_al_frm");var o=e.contentWindow||(e.contentDocument.document||e.contentDocument);o.document.open();o.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Untitled Document</title><style>body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;color: #99a0b0;font-size: 14px;}.popover__content{background-color: #fbfbfe; padding: 1.5rem; border-radius: 5px; width: 300px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);position: relative;}.popover__message{font-weight: 600;color:#56627c;font-size: 16px;}.pull-left{float:left;}.clearfix{clear: both;}.hdr-txt{width: 218px; margin-top: 3px;}.para-txt a{text-decoration: none;color: #005cde;}.close-btn{position: absolute;right:15px;top:15px;}.close-btn a{text-decoration: none;font-weight: 400; color: #56627c; font-size: 16px;}</style></head><body><div class="popover__content"><div class="close-btn"><a href="#" onclick="closeTLSAlert();">X</a></div><div class="popover__message"><div class="pull-left hdr-txt">This browser version is not supported on LiveChat.</div></div><div class="clearfix"></div><p class="para-txt">Please update your browser to the latest version and re-open the website to access the widget. </p></div><script>function closeTLSAlert(){window.parent.postMessage({key: "close_tls_alert",value: "close_tls_alert",action: "close_tls_alert"}, "*");}<\/script></body></html>');o.document.close();e.style.display="block";window.addEventListener("message",function(t){if(t.data.action=="close_tls_alert"){i.s()}})},s:function(){var t=document.getElementById("tls_al_frm");t.remove()}};i.t(function(t){});
+  </script>
+</body>
+</html>
